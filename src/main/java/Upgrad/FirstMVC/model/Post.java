@@ -1,10 +1,21 @@
 package Upgrad.FirstMVC.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.Date;
-
+@Entity
+@Table(name="posts")
 public class Post {
+    @Id
+    @Column (name = "id")
+    private Integer id;
+    @Column (name = "title")
     private String title;
+    @Column (name = "body")
     private String body;
+    @Column (name = "date")
     private Date date;
 
     public String getTitle() {
